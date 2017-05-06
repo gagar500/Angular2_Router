@@ -4,15 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
+import { HomeComponent } from './home.component';
+import { NotFoundComponent } from './not-found.component';
+import { MessagesComponent } from './message/messages.component';
+import { PhotosComponent } from './photo/photos.component';
+import {routing} from './app.routing';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,HomeComponent,NotFoundComponent,MessagesComponent,PhotosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
