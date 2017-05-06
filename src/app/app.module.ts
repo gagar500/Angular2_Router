@@ -11,6 +11,8 @@ import { PhotosComponent } from './photo/photos.component';
 import { PhotoDetailsComponent } from './photo/photodetails.component';
 import { routing } from './app.routing';
 import { photoRouting } from './photo/photos.routing';
+import {AuthService} from './auth.service';
+import {AuthGuard} from './app-guard.service';
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, NotFoundComponent, MessagesComponent, PhotosComponent, PhotoDetailsComponent
@@ -23,7 +25,7 @@ import { photoRouting } from './photo/photos.routing';
     photoRouting,
     routing
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
